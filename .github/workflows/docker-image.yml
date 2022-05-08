@@ -1,4 +1,4 @@
-name: Build Docker Image
+name: go
 on:
   workflow_dispatch:
 jobs:
@@ -10,6 +10,6 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           # 下方的name格式为：Docker Hub ID/自定义镜像名称
-          name: Docker Hub ID/自定义镜像名称
+          name: zhdw/go
           username: '${{ secrets.DOCKER_USERNAME }}'
           password: '${{ secrets.DOCKER_PASSWORD }}'
